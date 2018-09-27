@@ -1,0 +1,78 @@
+* {
+  margin:0;
+  padding:0;
+}
+
+$color-primary: #f9ed69; //yellow
+$color-secondray:#f08a5d; //orange
+$color-tertitary: #b83b5d; // pink
+$color-text-dark: #333; //dark
+$width-button: 150px;
+$color-text-light: #eee; 
+
+nav {
+  margin:30px;
+  background-color: $color-primary;
+  
+  
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+   
+}
+
+.navigation {
+  list-style:none;
+  float: left;
+ 
+  li {
+    display: inline-block;
+    margin-left: 30px;
+    
+    &:first-child {
+      margin-left:0px;
+    }
+    
+    a:link {
+      text-decoration: none;
+      text-transform: uppercase;
+      color:$color-text-dark;
+    }
+  }
+}
+
+.buttons {
+    float: right;
+  }
+
+.btn-main,
+.btn-hot {
+  display: inline-block;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+  border-radius: 100px;
+  text-transform: uppercase;
+  width: $width-button;
+  color:$color-text-light;
+}
+
+.btn-main {
+  &:link {
+    background-color: $color-secondray;
+  }
+  &:hover {
+    background-color: darken($color-secondray, 15%);
+  }
+}
+
+.btn-hot {
+    &:link {
+    background-color: $color-tertitary;
+    }
+    &:hover {
+    background-color: darken($color-tertitary, 15%);
+    }
+}
